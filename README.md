@@ -9,7 +9,7 @@ A modern, responsive, and visually premium landing page for **JG University**, b
 
 ## 🔗 Live Demo
 
-> **[View Live Demo](#)** _(link will be updated after Vercel deployment)_
+> **[View Live Demo](https://reducate-ai-assignment-two.vercel.app/)** — Deployed on Vercel
 
 ---
 
