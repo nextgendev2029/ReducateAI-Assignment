@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* --- Brand Colors --- */
+  --color-primary: #B91C1C;
+  --color-primary-dark: #7F1D1D;
+  --color-primary-light: #DC2626;
+  --color-accent: #D4A017;
+  --color-accent-light: #F2B84B;
+  --color-cream: #FFF8ED;
+  --color-cream-dark: #FAF3E7;
+  --color-charcoal: #171717;
+  --color-charcoal-light: #222222;
+  --color-border: #E8DDD0;
+  --color-border-light: #F0E8DC;
+
+  /* --- Fonts --- */
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== Partner Marquee ========== */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========== Custom Scrollbar ========== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ========== Selection ========== */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
